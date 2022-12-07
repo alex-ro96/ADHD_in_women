@@ -1,0 +1,77 @@
+---
+title: "Gender bias in ADHD diagnosis"
+author: "Alexandra Rossy"
+date: "(`r format(Sys.time(), '%d %B, %Y')`)"
+output:
+  github_document
+      toc:TRUE 
+---
+
+![@ADHD_couple, instagram: https://www.instagram.com/p/CF7aB2NDL3j/?hl=fr](/Users/alex-/Master/data sciences/datapractical/ADHD_woman.jpg)
+
+## Introduction
+  
+- fact 
+- fact 
+
+
+## References
+
+### Articles: 
+
+Hinshaw, S. P., Nguyen, P. T., O'Grady, S. M., & Rosenthal, E. A. (2022). Annual Research Review: Attention-deficit/hyperactivity disorder in girls and women: underrepresentation, longitudinal processes, and key directions. *Journal of child psychology and psychiatry, and allied disciplines*, 63(4), 484–496.
+
+Slobodin, O. & Davidovitch, M.(2019). Gender Differences in Objective and Subjective Measures of ADHD Among Clinic-Referred Children. *Frontiers*.
+
+### Data: 
+* National Survey of Children’s Health, Health Resources and Services Administration, Maternal and Child Health Bureau. <https://mchb.hrsa.gov/data/national-surveys>
+  + [Data table](https://www.childhealthdata.org/browse/survey/allstates?q=9343&g=1008&a=18062#)
+
+
+### Pictures:
+* @ADHD_couple on [Instagram](https://www.instagram.com/p/CF7aB2NDL3j/?hl=f)
+
+
+```{r echo=FALSE, warning = FALSE}
+
+library(tidyverse)
+library(dplyr)
+library(knitr)
+library(ggplot2)
+library("stringr")
+
+
+readxl::read_xlsx("data_children.xlsx")
+data_children <- readxl::read_xlsx("data_children.xlsx")
+summary(data_children)
+
+data_girls <- mean(data_children$`Female %`)
+data_girls
+
+data_boys <- mean(data_children$`Male %`)
+data_boys
+
+str(data_children[3])
+str(data_children[4])
+
+data_children %>% kable()
+
+usa_data = data.frame("Girls" = data_girls, "Boys"=data_boys) #how do I add a name for the row with the means?
+
+
+usa_data %>% kable() #How to add mean name? I can add in r markdown but well... 
+
+dataset <- data_children[,3:4]
+
+dataset %>%
+  ggplot( aes(x=))
+
+
+boxplot(data_children$`Male %`, data_children$`Female %`,
+        xlab= "Gender",
+        ylab= "Percentage ADHD",
+        col= "red")
+        
+
+
+```
