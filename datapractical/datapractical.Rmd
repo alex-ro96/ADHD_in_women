@@ -3,7 +3,7 @@ title: "Gender bias in ADHD diagnosis"
 author: "Alexandra Rossy"
 date: "(`r format(Sys.time(), '%d %B, %Y')`)"
 output:
-  github_document
+  pdf_document
       
 ---
 
