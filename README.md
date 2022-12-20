@@ -4,7 +4,7 @@ Alexandra Rossy
 (19 décembre, 2022)
 
 ![@ADHD_couple, instagram:
-<https://www.instagram.com/p/CF7aB2NDL3j/?hl=fr>](/Users/alex-/Master/data%20sciences/datapractical/ADHD_woman.jpg)
+<https://www.instagram.com/p/CF7aB2NDL3j/?hl=fr>](ADHD_woman.jpg)
 
 ## Introduction
 
