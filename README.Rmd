@@ -14,7 +14,7 @@ theme: united
 
 ***
 
-```{r  warning = FALSE, include=FALSE}
+```{r, warning = FALSE, include=FALSE}
 
 library(tidyverse)
 library(dplyr)
@@ -54,7 +54,7 @@ First of all, I was interested in confirming whether boys with ADHD were more nu
 
 **The table looks like this:** 
 
-```{r message=FALSE, warning=FALSE}
+```{r, message=FALSE, warning=FALSE}
 children <- readxl::read_xlsx("children_gender.xlsx")
 my_table <- (head(children))
 
@@ -62,7 +62,7 @@ my_table %>% kable()
   
 ```   
   
-```{r message=FALSE, warning=FALSE, include=FALSE}
+```{r, message=FALSE, warning=FALSE, include=FALSE}
 #For further information about my data
 
 summary(children)
@@ -73,7 +73,7 @@ children %>% kable()
 
  **&rarr;** **Therefore I decided to do a boxplot to confirm the expected results:**
 
-```{r message=FALSE, warning=FALSE }
+```{r, message=FALSE, warning=FALSE }
 
 
 ggplot(children, aes(x= Gender, y= ADHD, fill=Gender))+
@@ -114,7 +114,7 @@ Then, I took data about the mean percentage of adults in the USA with ADHD. [My 
 
 * **I decided to build a barplot in order to compare the mean for men and for women adults:** 
 
-```{r message=FALSE, warning=FALSE}
+```{r, message=FALSE, warning=FALSE}
 library(gridExtra)
 
 adult <- readxl::read_xlsx("adult_adhd.xlsx")
@@ -147,7 +147,7 @@ test_adult <- t.test(mean_adult)
 This time, the t.test I realized showed no significant difference between the men and the women percentage with ADHD. This change of significance may go in the direction of my hypothesis ( p-value = 0.1594).   
 
 
-```{r warning=FALSE, message=FALSE, include=FALSE}
+```{r, warning=FALSE, message=FALSE, include=FALSE}
 children_mean <- readxl::read_xlsx("children_mean.xlsx")
 female_tab <- readxl::read_xlsx("female_tab.xlsx")
 male_tab <- readxl::read_xlsx("male_tab.xlsx")
@@ -174,7 +174,7 @@ plot2 <- ggplot(children_mean, aes(x=Gender, y=Percentage, fill=Gender))+
 * **In order to have a better visualization of mean percentage for children with ADHD compared to adults with ADHD, I decided to group the barplots.** 
 
 
-```{r warning=FALSE, message=FALSE}
+```{r, warning=FALSE, message=FALSE}
 
 grid.arrange(plot1,plot2, ncol=2, top="Average population with ADHD in the USA")
 
@@ -212,7 +212,7 @@ percent %>% kable(caption="Percentage of adults who still have ADHD")
 
 ```   
 
-```{r warning=FALSE, message=FALSE}
+```{r, warning=FALSE, message=FALSE}
 results <- t.test(male_tab$Percentage,female_tab$Percentage, var.equal = FALSE)
 results
 
@@ -235,7 +235,7 @@ On the last table, we can see that we still have an average of 49% of 6.55 % of 
 * **If we recap:**   
 
 
-```{r message=FALSE, warning=FALSE}
+```{r, message=FALSE, warning=FALSE}
 test_table <- matrix(c("p-value < 2.2e-16", "p-value = 0.1594","p-value = 0.4473"), ncol=3, byrow = TRUE)
 colnames(test_table)= c("For children", "For adults", "For children vs adults")
 
@@ -295,7 +295,7 @@ Quinn, P.O. (2005). Treating adolescent girls and women with ADHD: Gender-Specif
   
 
   
-```{r echo=FALSE,warning=FALSE,message=FALSE, figure-side, fig.show='hold', include=FALSE}
+```{r, echo=FALSE,warning=FALSE,message=FALSE, figure-side, fig.show='hold', include=FALSE}
 
 both <- matrix(c(3.2,5.4,6.55,13.13), ncol=4, byrow=TRUE)
 
