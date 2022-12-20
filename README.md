@@ -16,7 +16,9 @@ Alexandra Rossy
 ------------------------------------------------------------------------
 
 ![@ADHD_couple, instagram:
-<https://www.instagram.com/p/CF7aB2NDL3j/?hl=fr>](ADHD_woman.jpg) \*\*\*
+<https://www.instagram.com/p/CF7aB2NDL3j/?hl=fr>](ADHD_woman.jpg) 
+
+***
 
 ``` r
 library(tidyverse)
@@ -40,6 +42,8 @@ library(shiny)
 ```
 
 ------------------------------------------------------------------------
+
+***
 
 ## Introduction
 
@@ -89,6 +93,8 @@ being on the rise too, the average of people with ADHD might be even
 higher than we think.
 
 ------------------------------------------------------------------------
+
+***
 
 ## Data analyses
 
@@ -473,6 +479,8 @@ expected results of children who would keep the disorder in adulthood.
 
 ------------------------------------------------------------------------
 
+***
+
 ## Results
 
 - **If we recap:**
@@ -505,6 +513,8 @@ be comparing the same proportion of percentage in the actual population.
 
 ------------------------------------------------------------------------
 
+***
+
 ## Conclusion
 
 As I said previously, my results aren’t very reliable. However, it seems
@@ -534,6 +544,8 @@ clinicians inquire about such factors as compensatory behaviors and life
 transitions in girls and women.”
 
 ------------------------------------------------------------------------
+
+***
 
 ## References
 
