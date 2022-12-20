@@ -43,7 +43,7 @@ library(shiny)
 
 ------------------------------------------------------------------------
 
-***
+
 
 ## Introduction
 
@@ -94,7 +94,7 @@ higher than we think.
 
 ------------------------------------------------------------------------
 
-***
+
 
 ## Data analyses
 
@@ -479,7 +479,6 @@ expected results of children who would keep the disorder in adulthood.
 
 ------------------------------------------------------------------------
 
-***
 
 ## Results
 
@@ -513,7 +512,6 @@ be comparing the same proportion of percentage in the actual population.
 
 ------------------------------------------------------------------------
 
-***
 
 ## Conclusion
 
@@ -545,7 +543,6 @@ transitions in girls and women.”
 
 ------------------------------------------------------------------------
 
-***
 
 ## References
 
