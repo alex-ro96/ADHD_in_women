@@ -10,6 +10,7 @@ output:
 ***
 
 ![@ADHD_couple, instagram: https://www.instagram.com/p/CF7aB2NDL3j/?hl=fr](ADHD_woman.jpg)
+
 ***
 
 ```{r, warning = FALSE}
