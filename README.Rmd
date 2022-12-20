@@ -15,7 +15,6 @@ output:
 ***
 
 ```{r, warning = FALSE, include=FALSE}
-
 library(tidyverse)
 library(dplyr)
 library(knitr)
@@ -59,7 +58,6 @@ children <- readxl::read_xlsx("children_gender.xlsx")
 my_table <- (head(children))
 
 my_table %>% kable()  
-  
 ```   
   
 ```{r, message=FALSE, warning=FALSE, include=FALSE}
@@ -68,14 +66,11 @@ my_table %>% kable()
 summary(children)
 
 children %>% kable()
-
 ```
 
  **&rarr;** **Therefore I decided to do a boxplot to confirm the expected results:**
 
 ```{r, message=FALSE, warning=FALSE }
-
-
 ggplot(children, aes(x= Gender, y= ADHD, fill=Gender))+
   geom_boxplot()+
   ggtitle("Percentage of children with ADHD in the USA")+
@@ -101,8 +96,6 @@ test_children <- t.test(girls$ADHD, boys$ADHD)
 
 #results: t = -11.872, df = 83.933, p-value < 2.2e-16
 #significant difference between boys and girls 
-
-
 ``` 
 
 
@@ -141,7 +134,6 @@ test_adult <- t.test(mean_adult)
 
 #results: t = 3.9091, df = 1, p-value = 0.1594
 #seems to be no significant difference between men and women --> so something must have changed between adult and children. seems to go in the direction of my hypothesis. 
-  
 ``` 
 
 This time, the t.test I realized showed no significant difference between the men and the women percentage with ADHD. This change of significance may go in the direction of my hypothesis ( p-value = 0.1594).   
@@ -168,14 +160,12 @@ plot2 <- ggplot(children_mean, aes(x=Gender, y=Percentage, fill=Gender))+
   ylim(0,15)+
   theme(legend.position="none")+
   xlab("Children")
-
 ```  
 
 * **In order to have a better visualization of mean percentage for children with ADHD compared to adults with ADHD, I decided to group the barplots.** 
 
 
 ```{r, warning=FALSE, message=FALSE}
-
 grid.arrange(plot1,plot2, ncol=2, top="Average population with ADHD in the USA")
 
 
@@ -209,7 +199,6 @@ percent <- matrix(c("~ 49%", "~ 43%"), ncol=2, byrow=TRUE)
 colnames(percent)= c("Women","Men")
 
 percent %>% kable(caption="Percentage of adults who still have ADHD")  
-
 ```   
 
 ```{r, warning=FALSE, message=FALSE}
@@ -218,7 +207,6 @@ results
 
 #results: t = 1.0422, df = 1.3628, p-value = 0.4473
 #as the significance value alpha = 0.05, p-value is > and so there is no significance difference between F and M, ADHD.   
-
 ```    
 
 
@@ -240,8 +228,6 @@ test_table <- matrix(c("p-value < 2.2e-16", "p-value = 0.1594","p-value = 0.4473
 colnames(test_table)= c("For children", "For adults", "For children vs adults")
 
 test_table %>%kable(caption="T.test for significance")
-
-
 ``` 
 
 There is only one significant difference for the percentage of boys and girls diagnosed with ADHD. The fact that there isn't significant difference among adult might go on the same direction as my hypothesis. Moreover, the higher percentage of girls who might keep ADHD while growing up comparing to the one for boys slightly supports my hypothesis. However, my hypothesis is not supported in a very reliable way as there is no significant difference between these two percentages. 
@@ -296,7 +282,6 @@ Quinn, P.O. (2005). Treating adolescent girls and women with ADHD: Gender-Specif
 
   
 ```{r, echo=FALSE,warning=FALSE,message=FALSE, figure-side, fig.show='hold', include=FALSE}
-
 both <- matrix(c(3.2,5.4,6.55,13.13), ncol=4, byrow=TRUE)
 
 colnames(both)= c("Female","Male","Girls","Boys")
@@ -321,7 +306,6 @@ mytab %>% kable()
 
 
 #I tried to display my tables side by side but I didn't like the format. 
-
 ```
 
 
